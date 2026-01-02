@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Proctoring System</title>
 
+  <!-- TensorFlow & Models -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/face-landmarks-detection"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh"></script>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: #f4f4f4;
+    }
+    video {
+      width: 480px;
+      border: 4px solid black;
+      margin-top: 10px;
+    }
+    #alert {
+      display: none;
+      background: red;
+      color: white;
+      padding: 10px;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Smart Proctoring System</h2>
+
+  <video id="video" autoplay muted></video>
+
+  <div id="alert">⚠️ Suspicious Behavior Detected</div>
+
+  <audio id="alarm" src="https://www.soundjay.com/buttons/sounds/beep-07.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
